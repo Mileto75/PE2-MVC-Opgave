@@ -1,0 +1,36 @@
+# This is a sample build configuration for .NET Core.
+# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: microsoft/dotnet:sdk
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - dotnetcore
+        name: restore and build Web Project
+        script:
+          #- export DOMAIN_PROJECT=HeroCards.Domain
+          - export WEB_PROJECT=HeroCards.Web
+          #- dotnet restore
+          #- dotnet build $DOMAIN_PROJECT
+          - dotnet restore
+          - dotnet build $WEB_PROJECT
+    - step:
+        name: testing Domain Project
+        script:
+          - export TEST_DOMAINPROJ=Tests/HeroCards.Domain.Tests
+          - dotnet test $TEST_DOMAINPROJ
+    - step:
+        name: testing Web Project
+        script:
+          - export TEST_WEBPROJ=Tests/HeroCards.Web.Tests
+          - dotnet test $TEST_WEBPROJ
+    - step:
+        deployment: production
+        name: publish to Azure
+        script:
+          - git push https://$AZURE_DEPLOY_USER:$AZURE_DEPLOY_PASS@b1-herocards-exercise.scm.azurewebsites.net:443/b1-herocards-exercise.git
+

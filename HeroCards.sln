@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeroCards.Web", "HeroCards.Web\HeroCards.Web.csproj", "{641369DA-9243-40CE-97E2-751CBD82687E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeroCards.Domain", "HeroCards.Domain\HeroCards.Domain.csproj", "{0BB8763B-F7EE-48BE-8C34-9138D97C9FF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{641369DA-9243-40CE-97E2-751CBD82687E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641369DA-9243-40CE-97E2-751CBD82687E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641369DA-9243-40CE-97E2-751CBD82687E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641369DA-9243-40CE-97E2-751CBD82687E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BB8763B-F7EE-48BE-8C34-9138D97C9FF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB8763B-F7EE-48BE-8C34-9138D97C9FF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB8763B-F7EE-48BE-8C34-9138D97C9FF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB8763B-F7EE-48BE-8C34-9138D97C9FF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {990A8741-0721-4879-AF33-028BA60B6870}
+	EndGlobalSection
+EndGlobal
